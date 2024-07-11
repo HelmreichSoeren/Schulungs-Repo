@@ -28,8 +28,8 @@ on:
        default: solution
 env:
 #edit your values here
-  ENVIRONMENT_URL: 'https://orgb686f1f4.crm4.dynamics.com'
-  CLIENT_ID: 'c99afbb3-a451-43b2-802e-92c469066b06'
+  ENVIRONMENT_URL: 'https://org53e67ee9.crm4.dynamics.com'
+  CLIENT_ID: 'f66647fa-0a42-41b2-87f9-e6881132775d'
   TENANT_ID: '18e22a74-bee3-462b-aee3-172df46291f3'
 permissions:
   contents: write
@@ -58,7 +58,7 @@ jobs:
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}
-        client-secret: ${{ secrets.CLIENTSECRET }}
+        client-secret: ${{ secrets.CLIENTSECRET_CDDEV_CDDEV }}
         tenant-id: ${{env.TENANT_ID}}
         solution-file: ${{ github.workspace }}\${{ github.event.inputs.solution_name }}.zip
 
@@ -67,7 +67,7 @@ jobs:
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}
-        client-secret: ${{ secrets.CLIENTSECRET }}
+        client-secret: ${{ secrets.CLIENTSECRET_CDDEV }}
         tenant-id: ${{env.TENANT_ID}}
 
     - name: Get XML Info
